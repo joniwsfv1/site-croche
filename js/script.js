@@ -1,3 +1,7 @@
-function toggleMenu() {
-    document.getElementById("menu").classList.toggle("ativo");
-}
+const botao = document.getElementById("menu-btn");
+const menu = document.getElementById("menu");
+
+
+botao.addEventListener("click", () => {
+    menu.classList.toggle("ativo");
+});

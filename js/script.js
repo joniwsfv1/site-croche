@@ -1,7 +1,14 @@
-const botao = document.getElementById("menu-btn");
-const menu = document.getElementById("menu");
+function toggleMenu(){
 
+    const menu = document.getElementById("menu");
+    const btn = document.querySelector(".menu-btn");
 
-botao.addEventListener("click", () => {
     menu.classList.toggle("ativo");
-});
+
+    if(menu.classList.contains("ativo")){
+        btn.innerHTML = "✕";
+    }else{
+        btn.innerHTML = "☰";
+    }
+
+}

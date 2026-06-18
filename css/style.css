@@ -1,16 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
 
 :root{
-
-    --creme:#F8F1E7;
-    --bege:#EADCC8;
+    --offwhite:#F5EFE6;
+    --creme:#EADCC8;
     --marrom:#5A4635;
     --dourado:#B89B6B;
-    --branco:#ffffff;
-
+    --vinho:#7A4B4B;
 }
-
 
 *{
     margin:0;
@@ -18,353 +14,131 @@
     box-sizing:border-box;
 }
 
-
 body{
-
-    background:var(--creme);
+    background:var(--offwhite);
     color:var(--marrom);
-
+    font-family:'Oswald',sans-serif;
 }
-
 
 header{
-
-    border-bottom:1px solid rgba(90,70,53,.15);
-
+    border-bottom:1px solid rgba(0,0,0,.08);
 }
-
 
 .header-container{
-
-    height:90px;
-
-    display:flex;
-    justify-content:center;
-    align-items:center;
-
+    height:80px;
     position:relative;
 
+    display:flex;
+    justify-content:center;
+    align-items:center;
 }
-
 
 .logo{
-
-    font-family:'Cormorant Garamond', serif;
-
-    font-size:42px;
-
-    letter-spacing:8px;
-
-    font-weight:500;
-
+    font-size:2rem;
+    letter-spacing:3px;
 }
-
 
 .menu-btn{
-
     position:absolute;
-
-    right:25px;
+    right:20px;
 
     background:none;
-
     border:none;
 
+    font-size:2rem;
     cursor:pointer;
 
-    font-size:35px;
-
     color:var(--marrom);
-
 }
-
-
 
 nav{
-
     display:none;
-
     flex-direction:column;
-
-    gap:20px;
-
     text-align:center;
-
+    gap:15px;
+    padding:20px;
     background:white;
-
-    padding:25px;
-
 }
-
-
 
 nav.ativo{
-
     display:flex;
-
 }
-
-
 
 nav a{
-
-    font-family:'Montserrat',sans-serif;
-
     text-decoration:none;
-
     color:var(--marrom);
-
-    font-size:18px;
-
-    transition:.3s;
-
+    font-size:1.2rem;
 }
-
-
-nav a:hover{
-
-    color:var(--dourado);
-
-}
-
-
-
-/* CONTEÚDO */
-
 
 main{
-
-    max-width:1100px;
-
+    max-width:1000px;
     margin:auto;
-
-    padding:100px 25px;
-
+    padding:80px 20px;
 }
 
-
-
-.hero{
-
+h1{
+    font-size:4rem;
     text-align:center;
-
+    margin-bottom:20px;
 }
 
-
-
-.hero h1{
-
-    font-family:'Cormorant Garamond',serif;
-
-    font-size:80px;
-
-    font-weight:500;
-
-    line-height:1;
-
+h2{
+    font-size:2.5rem;
+    margin-bottom:20px;
 }
 
-
-
-.hero p{
-
-    margin-top:30px;
-
-    font-family:'Montserrat',sans-serif;
-
-    font-size:18px;
-
+p{
+    font-size:1.1rem;
     line-height:1.8;
-
 }
-
-
-
-.titulo{
-
-    font-family:'Cormorant Garamond',serif;
-
-    font-size:65px;
-
-    text-align:center;
-
-    margin-bottom:50px;
-
-}
-
-
-
-.texto{
-
-    font-family:'Montserrat',sans-serif;
-
-    text-align:center;
-
-    line-height:2;
-
-    font-size:18px;
-
-}
-
-
-
-/* PRODUTOS */
-
 
 .cards{
-
     display:grid;
-
-    grid-template-columns:repeat(3,1fr);
-
-    gap:30px;
-
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
 }
-
-
 
 .card{
-
     background:white;
-
+    border-radius:15px;
     padding:25px;
-
-    border-radius:20px;
-
     text-align:center;
-
 }
 
-
-
-.imagem{
-
-    height:300px;
-
-    background:var(--bege);
-
-    border-radius:15px;
+.placeholder{
+    height:250px;
+    background:var(--creme);
+    border-radius:10px;
+    margin-bottom:15px;
 
     display:flex;
-
-    align-items:center;
-
     justify-content:center;
-
-    font-family:'Montserrat';
-
+    align-items:center;
 }
 
-
-
-.card h2{
-
-    margin-top:20px;
-
-    font-family:'Cormorant Garamond';
-
-    font-size:32px;
-
+ul{
+    margin-left:25px;
+    line-height:2;
 }
-
-
-
-/* LISTA */
-
-
-.lista{
-
-    max-width:500px;
-
-    margin:auto;
-
-    font-family:'Montserrat';
-
-    font-size:18px;
-
-    line-height:2.5;
-
-}
-
-
-
-/* FOOTER */
-
 
 footer{
-
-    background:var(--marrom);
-
-    color:white;
-
     text-align:center;
-
-    padding:40px;
-
-    font-family:'Montserrat';
-
+    padding:50px 20px;
+    background:var(--marrom);
+    color:white;
 }
-
-
-
-/* CELULAR */
-
 
 @media(max-width:768px){
 
+    .logo{
+        font-size:1.4rem;
+    }
 
-.logo{
+    h1{
+        font-size:2.7rem;
+    }
 
-    font-size:28px;
-
-    letter-spacing:5px;
-
-}
-
-
-main{
-
-    padding:60px 20px;
-
-}
-
-
-.hero h1{
-
-    font-size:45px;
-
-}
-
-
-.titulo{
-
-    font-size:42px;
-
-}
-
-
-
-.cards{
-
-    grid-template-columns:1fr;
-
-}
-
-
-.card{
-
-    width:100%;
-
-}
-
-
-.menu-btn{
-
-    right:15px;
-
-    font-size:30px;
-
-}
-
-
+    h2{
+        font-size:2rem;
+    }
 }
